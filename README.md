@@ -9,13 +9,14 @@
 ### 2023-02
 
 ## Integrantes
-- [Nome do integrante 1 e link do portifólio](https://github.com/carlosrafaelgn/)
-- [Nome do integrante 2 e link do portifólio](https://github.com/carlosrafaelgn/)
-- [Nome do integrante 3 e link do portifólio](https://github.com/carlosrafaelgn/)
+- [Gabriel Gonçalves Formario](https://github.com/carlosrafaelgn/)
+- [Luiz Guilherme Machado Bueno Pereira](https://github.com/carlosrafaelgn/)
+- [Dylan Marques Ashby](https://github.com/carlosrafaelgn/)
+- [Rafael Marqueti de Andrade](http://github.com/rafaelmarqueti/)
 
 ## Descrição do Projeto
 
-Descrição do projeto, incluindo o problema original, e o objetivo final. Pode ser em mais de um parágrafo.
+O projeto TrafficGuardian almeja desenvolver um sistema de monitoramento de tráfego baseado em sensores que coletam e analisam dados para fornecer informações valiosas sobre o fluxo de tráfego nas vias urbanas. 
 
 # Detalhes de Configuração
 
