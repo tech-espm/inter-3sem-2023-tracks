@@ -16,7 +16,7 @@
 
 ## Descrição do Projeto
 
-O projeto TrafficGuardian almeja desenvolver um sistema de monitoramento de tráfego baseado em sensores que coletam e analisam dados para fornecer informações valiosas sobre o fluxo de tráfego nas vias urbanas. 
+O projeto TrafficGuardian almeja desenvolver um sistema de monitoramento de tráfego baseado em sensores que coletam e analisam dados para fornecer informações valiosas sobre o fluxo de tráfego nas vias urbanas. Para fins de aplicação da ideia, usaremos a utilização de um arduino contendo alguns sensores que farão a medição desses dados e aplicaremos diversas métricas, calculos e conclusões sobre.
 
 # Detalhes de Configuração
 
