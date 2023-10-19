@@ -9,14 +9,14 @@
 ### 2023-02
 
 ## Integrantes
+- [Dylan Marques Ashby](https://github.com/carlosrafaelgn/)
 - [Gabriel Gonçalves Formario](https://github.com/carlosrafaelgn/)
 - [Luiz Guilherme Machado Bueno Pereira](https://github.com/carlosrafaelgn/)
-- [Dylan Marques Ashby](https://github.com/carlosrafaelgn/)
 - [Rafael Marqueti de Andrade](http://github.com/rafaelmarqueti/)
 
 ## Descrição do Projeto
 
-O projeto TrafficGuardian almeja desenvolver um sistema de monitoramento de tráfego baseado em sensores que coletam e analisam dados para fornecer informações valiosas sobre o fluxo de tráfego nas vias urbanas. Para fins de aplicação da ideia, usaremos a utilização de um arduino contendo alguns sensores que farão a medição desses dados e aplicaremos diversas métricas, calculos e conclusões sobre.
+O projeto TRACKS almeja desenvolver um sistema de monitoramento de tráfego baseado em sensores que coletam e analisam dados para fornecer informações valiosas sobre o fluxo de tráfego nas vias urbanas. Para fins de aplicação da ideia, usaremos a utilização de um arduino contendo alguns sensores que farão a medição desses dados e aplicaremos diversas métricas, calculos e conclusões sobre.
 
 # Detalhes de Configuração
 
