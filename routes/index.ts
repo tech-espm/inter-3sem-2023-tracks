@@ -1,4 +1,5 @@
 ﻿import app = require("teem");
+import Log = require("../models/log");
 
 class IndexRoute {
 	public async index(req: app.Request, res: app.Response) {
@@ -50,19 +51,14 @@ class IndexRoute {
 		res.render("index/sobre", opcoes);
 	}
 
-	public async obterDados(req: app.Request, res: app.Response) {
-		let dados = [
-			{ dia: "10/09", valor: 80 },
-			{ dia: "11/09", valor: 92 },
-			{ dia: "12/09", valor: 90 },
-			{ dia: "13/09", valor: 101 },
-			{ dia: "14/09", valor: 105 },
-			{ dia: "15/09", valor: 100 },
-			{ dia: "16/09", valor: 64 },
-			{ dia: "17/09", valor: 78 },
-			{ dia: "18/09", valor: 93 },
-			{ dia: "19/09", valor: 110 }
-		];
+	public async obterDadosPorDia(req: app.Request, res: app.Response) {
+		let dados = await Log.listarPorDia(req.query.dataInicial as string, req.query.dataFinal as string);
+
+		res.json(dados);
+	}
+
+	public async obterDadosPorDiaPlaca(req: app.Request, res: app.Response) {
+		let dados = await Log.listarPorPlacaDia(req.query.dataInicial as string, req.query.dataFinal as string, req.query.placa as string);
 
 		res.json(dados);
 	}
