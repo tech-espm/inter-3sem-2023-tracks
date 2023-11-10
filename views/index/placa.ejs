@@ -1,33 +1,33 @@
 ﻿<div class="container-fluid">
-
-	<h1 class="my-5">
-		Relatório por Placa
-	</h1>
-	
-	<div class="row">
-		<div class="col-sm-4 pb-4">
-
-			<div class="card shadow">
-				<div class="card-body">
-					<form id="form">
-						<div class="form-group">
-							<label for="data">Data</label>
-							<input id="data" name="data" class="form-control" type="date" value="<%= ano %>-<%= mes %>-<%= dia %>" />
-						</div>
-
-						<button type="submit" class="btn btn-primary">Listar</button>
-					</form>
-				</div>
-			</div>
-
-		</div>
-	</div>
-
-	<div class="card shadow mb-4">
-		<div class="card-body" id="div-grafico"></div>
-	</div>
-
+    <h1 class="my-5">Relatório por Placa</h1>
+    <div class="row">
+        <div class="col-sm-4 pb-4">
+            <div class="card shadow">
+                <div class="card-body">
+                    <form id="form">
+                        <div class="form-group">
+                            <label for="dataInicial">Data Inicial</label>
+                            <input id="dataInicial" name="dataInicial" class="form-control" type="date" value="<%= ano %>-<%= mes %>-01" />
+                        </div>
+                        <div class="form-group">
+                            <label for="dataFinal">Data Final</label>
+                            <input id="dataFinal" name="dataFinal" class="form-control" type="date" value="<%= ano %>-<%= mes %>-<%= dia %>" />
+                        </div>
+                        <div class="form-group">
+                            <label for="placa">Placa</label>
+                            <input id="placa" name="placa" class="form-control" type="text" placeholder="Digite a placa" value="abc1234"/>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Listar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card shadow mb-4">
+        <div class="card-body" id="div-grafico"></div>
+    </div>
 </div>
+
 
 <script src="/public/js/jquery-validate/jquery.validate.min.js"></script>
 <script src="/public/js/jquery-validate/additional-methods.min.js"></script>
@@ -39,7 +39,7 @@
 
 	$("#form").validate({
 		rules: {
-			data: {
+			dataInicial: {
 				required: true
 			}
 		},
@@ -50,11 +50,13 @@
 
 	async function atualizarDados() {
 		waitSwal();
-
 		try {
-
-			let response = await fetch("/obterDados");
-
+			const dataInicial = document.getElementById("dataInicial").value; 
+			const dataFinal = document.getElementById("dataFinal").value; 
+			const placa = document.getElementById("placa").value;
+			
+			let response = await fetch(`/obterDadosPorDiaPlaca?dataInicial=${dataInicial}&dataFinal=${dataFinal}&placa=${placa}`);
+		
 			if (response.ok) {
 
 				Swal.close();
@@ -72,7 +74,7 @@
 
 				for (let i = 0; i < dados.length; i++) {
 					labels.push(dados[i].dia);
-					data.push(dados[i].valor);
+					data.push(dados[i].total);
 				}
 
 				let grafico = new Chart(document.getElementById("grafico-barras"), {

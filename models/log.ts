@@ -23,7 +23,7 @@ class Log {
 			dados = await sql.query(`
                 SELECT count(entrada) total, entrada, date(data) dt, date_format(data, '%d/%m') dia
                 FROM log
-                WHERE data BETWEEN '2023-11-01 00:00:00' AND '2023-11-03 23:59:59'
+                WHERE data BETWEEN ? AND ?
                 GROUP BY entrada, dt, dia
                 ORDER BY dt, entrada
             `, [ dataInicial, dataFinal ])

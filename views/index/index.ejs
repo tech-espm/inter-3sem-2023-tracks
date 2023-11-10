@@ -15,7 +15,7 @@
 							<div class="col-sm-6">
 								<div class="form-group">
 									<label for="dataInicial">Data Inicial</label>
-									<input id="dataInicial" name="dataInicial" class="form-control" type="date" value="<%= anoInicial %>-<%= mesInicial %>-<%= diaInicial %>" />
+									<input id="dataInicial" name="dataInicial" class="form-control" type="date" value="<%= anoInicial %>-<%= mesInicial %>-01" />
 								</div>
 							</div>
 
@@ -51,7 +51,7 @@
 
 	$("#form").validate({
 		rules: {
-			data: {
+			dataInicial: {
 				required: true
 			}
 		},
@@ -63,9 +63,12 @@
 	async function atualizarDados() {
 		waitSwal();
 
+		const dataInicial = document.getElementById("dataInicial").value; 
+		const dataFinal = document.getElementById("dataFinal").value; 
+
 		try {
 
-			let response = await fetch("/obterDadosPorDia");
+			let response = await fetch(`/obterDadosPorDia?dataInicial=${dataInicial}&dataFinal=${dataFinal}`);
 
 			if (response.ok) {
 
