@@ -5,6 +5,7 @@ img {
 html, body {
 	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
 	min-height: 100vh;
+	background: #222;
 }
 
 .limitador {
@@ -16,11 +17,15 @@ html, body {
 	display: flex;
 	flex-direction: column;
 	flex-wrap: nowrap;
+	box-shadow: 0 0 2rem #000;
 }
 
 .conteudo {
 	/* Para fazer o rodapé ficar sempre na parte inferior da página ;) */
 	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 .rodape {
@@ -32,4 +37,13 @@ html, body {
 .link-rodape, .link-rodape:hover {
 	color: white;
 	text-decoration: none;
+}
+
+.secao1sobre {
+	background-image: url('/public/img/fotoback.jpg');
+    padding: 25px;
+    background-size: cover;
+    background-position: center top;
+    box-sizing: border-box;
+	flex: 1 1 auto;
 }
