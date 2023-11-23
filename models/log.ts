@@ -50,6 +50,17 @@ class Log {
 
 		return dados;
     }
+
+    public static async logar(placa: string, entrada: number): Promise<void> {
+  
+      await app.sql.connect(async (sql) => {
+        await sql.query(`
+          INSERT INTO log (placa, entrada, data)
+          VALUES (?, ?, now());
+        `, [ placa, entrada ]);
+      });
+  
+    }
 }
 
 export = Log;

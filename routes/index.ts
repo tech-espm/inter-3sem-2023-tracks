@@ -62,6 +62,21 @@ class IndexRoute {
 
 		res.json(dados);
 	}
+
+	public async criarLog(req: app.Request, res: app.Response) {
+
+		let placa = req.query["placa"] as string;
+		let entrada = parseInt(req.query["entrada"] as string);
+
+		if (!placa || (entrada != 0 && entrada != 1)) {
+			res.status(400).json("Dados inválidos");
+			return;
+		}
+
+		await Log.logar(placa, entrada);
+
+		res.json(true);
+	}
 }
 
 export = IndexRoute;
