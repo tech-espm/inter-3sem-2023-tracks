@@ -63,10 +63,11 @@ class IndexRoute {
 		res.json(dados);
 	}
 
+	@app.http.post()
 	public async criarLog(req: app.Request, res: app.Response) {
 
-		let placa = req.query["placa"] as string;
-		let entrada = parseInt(req.query["entrada"] as string);
+		let placa = req.body.placa as string;
+		let entrada = parseInt(req.body.entrada as string);
 
 		if (!placa || (entrada != 0 && entrada != 1)) {
 			res.status(400).json("Dados inválidos");

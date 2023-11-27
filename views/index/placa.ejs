@@ -29,7 +29,7 @@
 							<div class="col-sm-4">
 								<div class="form-group">
 									<label for="placa">Placa</label>
-									<input id="placa" name="placa" class="form-control" type="text" placeholder="Digite a placa" value="abc1234"/>
+									<input id="placa" name="placa" class="form-control text-uppercase" type="text" placeholder="Digite a placa" value="abc1234"/>
 								</div>
 							</div>
 						</div>
@@ -70,7 +70,7 @@
 		try {
 			const dataInicial = document.getElementById("dataInicial").value; 
 			const dataFinal = document.getElementById("dataFinal").value; 
-			const placa = document.getElementById("placa").value;
+			const placa = document.getElementById("placa").value.toUpperCase();
 			
 			let response = await fetch(`/obterDadosPorDiaPlaca?dataInicial=${dataInicial}&dataFinal=${dataFinal}&placa=${placa}`);
 		
@@ -99,7 +99,7 @@
 					data: {
 						labels: labels,
 						datasets: [{
-							label: "Movimentações da placa" + placa,
+							label: "Movimentações da placa " + placa,
 							backgroundColor: "#4e73df",
 							hoverBackgroundColor: "#2e59d9",
 							borderColor: "#4e73df",
