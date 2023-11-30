@@ -86,7 +86,7 @@ void loop() {
     }
 
     http.end();
+    delay(2000);
   }
 
-  delay(2000);
 }
