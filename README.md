@@ -20,14 +20,6 @@ O projeto TRACKS almeja desenvolver um sistema de monitoramento de tráfego base
 
 # Detalhes de Configuração
 
-```
-Aqui deve ser colocado o conteúdo do arquivo .env e/ou de outros arquivos de configuração, ou detalhes de arquivos ou pastas que não estão no repositório do projeto, mas que devem existir para que o projeto possa ser executado com sucesso.
-
-Por exemplo, a descrição do conteúdo do arquivo .env, ou nomes de pastas que precisam existir.
-
-(Remover esse aviso na versão final)
-```
-
 Para funcionar corretamente, devem ser criados os seguintes arquivos/pastas nos caminhos especificados, com o conteúdo especificado:
 
 - O arquivo `.env` deve ser criado em `/`, com o conteúdo abaixo:
